@@ -1,262 +1,135 @@
-\# Simple LMS – Django Docker Setup
+# 🎓 Simple LMS – Django Docker Setup
 
+## 📌 Deskripsi Project
 
+Project ini merupakan setup **Django Web Application menggunakan Docker dan PostgreSQL** sebagai database untuk sistem **Simple Learning Management System (LMS)**.
 
-\## 📌 Deskripsi Project
+Project ini dibuat untuk memenuhi tugas **Setup Development Environment menggunakan Docker**.
 
+---
 
+# 🐳 Teknologi yang Digunakan
 
-Project ini merupakan setup \*\*Django Web Application menggunakan Docker dan PostgreSQL\*\* sebagai database untuk sistem \*\*Simple Learning Management System (LMS)\*\*.
+* Python 3.11
+* Django 4.2
+* Docker
+* Docker Compose
+* PostgreSQL
 
+---
 
-
-Project ini dibuat untuk memenuhi tugas \*\*Setup Development Environment menggunakan Docker\*\*.
-
-
-
-\---
-
-
-
-\# 🐳 Teknologi yang Digunakan
-
-
-
-\* \*\*Python 3.11\*\*
-
-\* \*\*Django 4.2\*\*
-
-\* \*\*Docker\*\*
-
-\* \*\*Docker Compose\*\*
-
-\* \*\*PostgreSQL\*\*
-
-
-
-\---
-
-
-
-\# 📂 Struktur Project
-
-
+# 📂 Struktur Project
 
 ```
-
 simple-lms/
-
 │
-
 ├── docker-compose.yml
-
 ├── Dockerfile
-
 ├── requirements.txt
-
 ├── manage.py
-
 │
-
 ├── config/
-
 │   ├── settings.py
-
 │   ├── urls.py
-
 │   └── wsgi.py
-
 │
-
+├── Screenshots/
+│   └── django.png
+│
 ├── .env.example
-
 └── README.md
-
 ```
 
+---
 
-
-\---
-
-
-
-\# ⚙️ Environment Variables
-
-
+# ⚙️ Environment Variables
 
 File `.env` digunakan untuk konfigurasi database.
 
-
-
 Contoh isi `.env`:
 
-
-
+```
+DB_NAME=lms_db
+DB_USER=lms_user
+DB_PASSWORD=lms_password
+DB_HOST=db
+DB_PORT=5432
 ```
 
-DB\_NAME=lms\_db
+---
 
-DB\_USER=lms\_user
+# 🚀 Cara Menjalankan Project
 
-DB\_PASSWORD=lms\_password
-
-DB\_HOST=db
-
-DB\_PORT=5432
+## 1️⃣ Clone Repository
 
 ```
-
-
-
-\---
-
-
-
-\# 🚀 Cara Menjalankan Project
-
-
-
-\## 1. Clone Repository
-
-
-
-```
-
 git clone https://github.com/USERNAME/simple-lms.git
-
 ```
-
-
 
 Masuk ke folder project
 
-
-
 ```
-
 cd simple-lms
-
 ```
 
+---
 
-
-\---
-
-
-
-\## 2. Build Docker Container
-
-
+## 2️⃣ Build Docker Container
 
 ```
-
 docker compose build
-
 ```
 
+---
 
-
-\---
-
-
-
-\## 3. Jalankan Container
-
-
+## 3️⃣ Jalankan Container
 
 ```
-
 docker compose up
-
 ```
 
+---
 
-
-\---
-
-
-
-\## 4. Akses Aplikasi
-
-
+## 4️⃣ Akses Aplikasi
 
 Buka browser dan akses:
 
-
-
 ```
-
 http://localhost:8000
-
 ```
 
+Jika berhasil akan muncul **Django Welcome Page**.
 
+---
 
-Jika berhasil akan muncul \*\*Django Welcome Page\*\*.
+# 🗄 Database
 
-
-
-\---
-
-
-
-\# 🗄 Database
-
-
-
-Project ini menggunakan \*\*PostgreSQL yang dijalankan melalui Docker container\*\*.
-
-
+Project ini menggunakan **PostgreSQL yang dijalankan melalui Docker container**.
 
 Service database dikonfigurasi di file:
 
-
-
 ```
-
 docker-compose.yml
-
 ```
 
+---
 
+# 📸 Screenshot
 
-\---
+## Django Welcome Page
 
+<img src="Screenshots/django.png" width="800">
 
+---
 
-\# 📸 Screenshot
+# 📚 Referensi
 
-![welcome page](./Screenshots/django.png)
+* Docker Documentation
+* Django Documentation
+* PostgreSQL Documentation
 
+---
 
+# 👨‍💻 Author
 
-
-
-\---
-
-
-
-\# 📚 Referensi
-
-
-
-\* Docker Documentation
-
-\* Django Documentation
-
-\* PostgreSQL Documentation
-
-
-
-\---
-
-
-
-\# 👨‍💻 Author
-
-
-
-Daffa Tri
-
-
-
+**Daffa Tri**
