@@ -226,7 +226,7 @@ docker-compose.yml
 
 \# 📸 Screenshot
 
-[install](Screenshots/DJANGO.png)
+[install](Screenshots/django.png)
 
 
 
